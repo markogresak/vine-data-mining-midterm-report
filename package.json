@@ -21,6 +21,9 @@
     "postinstall": "bower install"
   },
   "dependencies": {
-    "node-static": "^0.7.6"
+    "underscore": "~1.5.1",
+    "express": "~2.5.9",
+    "mustache": "~0.7.2",
+    "socket.io": "~0.9.16"
   }
 }

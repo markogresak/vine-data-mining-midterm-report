@@ -22,7 +22,7 @@
 			notes: '',
 			markdown: false,
 			socketId: socketId,
-			state: Reveal.getState()
+			state: Reveal.getCurrentSlide()
 		};
 
 		// Look for notes defined in a slide attribute

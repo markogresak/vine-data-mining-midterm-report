@@ -72,8 +72,20 @@
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
                 transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
+                multiplex: {
+                    // Example values. To generate your own, see the socket.io server instructions.
+                    secret: '13652805320794272084', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+                    id: '1ea875674b17ca76', // Obtained from socket.io server
+                    url: 'revealjs.jit.su:80' // Location of socket.io server
+                },
+
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
+                    { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js', async: true },
+                    { src: 'js/plugin/multiplex/master.js', async: true },
+
+                    // and if you want speaker notes
+                    { src: 'js/plugin/notes-server/client.js', async: true }
                     { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
